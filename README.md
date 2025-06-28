@@ -1,38 +1,40 @@
 
-# Yield Prediction using Random Forest Regressor
+# Yield Prediction using XGBoost and Optuna
 
-This project uses a Random Forest Regressor model to predict yield based on various features given. It aims to build a strong baseline model with efficient preprocessing, evaluation, and final submission generation.
-
----
-
-## Dataset
-
-- **Source:** [https://www.kaggle.com/competitions/ml-league-supervised-learning-competition](https://www.kaggle.com/competitions/ml-league-supervised-learning-competition)
-
-- **Files:**
-  - `train.csv`: Training dataset
-  - `test.csv`: Test dataset
-  - `sample_submission.csv`: Format for submission
+This project uses an **XGBoost Regressor** model with **Optuna** hyperparameter tuning to predict crop yield based on the given features.  
+It aims to build an accurate model using cross-validation and optimization techniques.
 
 ---
 
-## ⚙️ How to Run
+##  Dataset
+
+**Source**: [Kaggle Competition — ML League Supervised Learning](https://www.kaggle.com/competitions/ml-league-supervised-learning-competition)
+
+**Files:**
+- `train.csv`: Training dataset
+- `test.csv`: Test dataset
+- `sample_submission.csv`: Sample format for submission
+
+---
+
+## ⚙ How to Run
 
 ### Option 1: Google Colab
-1. Open this notebook in [Google Colab](https://colab.research.google.com/)
+1. Open the notebook in **Google Colab**
 2. Upload the dataset files (`train.csv`, `test.csv`, `sample_submission.csv`)
 3. Run all cells sequentially
-4. Download the final `random_forest_submission.csv` from the submission folder
+4. Download `submission.csv` after predictions are made
 
 ### Option 2: Local Setup
 
-#### 🔧 Requirements
-Install dependencies using:
+####  Requirements
+Install required dependencies:
 ```bash
+pip install pandas xgboost scikit-learn optuna
 pip install -r requirements.txt
 ```
 
-#### 🧪 Run the Notebook
+####  Run the Notebook
 Open and run the notebook using:
 ```bash
 jupyter notebook notebooks/yield_prediction.ipynb
@@ -55,11 +57,11 @@ yield-prediction/
 │   └── sample_submission.csv
 │
 ├── notebooks/
-│   └── yield_prediction_random_forest.ipynb
+│   └── yield_prediction.ipynb
 │
 │
 ├── submission/
-│   └── random_forest_submission.csv
+│   └── submission.csv
 │
 ├── README.md
 ├── requirements.txt
